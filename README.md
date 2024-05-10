@@ -87,5 +87,37 @@ sns.histplot(data=df,x="Pclass",hue="Survived",kde=True)
 sns.boxplot(x='Pclass',y='Age',data=df,palette='rainbow')
 plt.title("Age By Passenger Class")
 ```
+![image](https://github.com/Vanitha-SM/EXNO-6-DS/assets/119557985/52c99a1e-5dc4-4bba-b6c3-e3f4cd49880e)
+
+### 3.Violin Plot
+
+```
+sns.violinplot(x="Pclass", y="Fare", data=df)
+plt.title('Violin Plot of Fare by Passenger Class')
+plt.show()
+```
+![image](https://github.com/Vanitha-SM/EXNO-6-DS/assets/119557985/a14a9831-59e4-4ad0-8ef6-badac2797813)
+
+### 4.Density Plot
+
+```
+sns.kdeplot(data=df['Age'], shade=True)
+plt.title('Density Plot of Passenger Ages')
+plt.show()
+```
+
+![image](https://github.com/Vanitha-SM/EXNO-6-DS/assets/119557985/f7634781-9ca4-4228-8521-20eaa590c426)
+
+### 5.Heatmap
+```
+numeric_df = df.select_dtypes(include=['float64', 'int64'])
+corr_matrix = numeric_df.corr()
+sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
+plt.title('Heatmap of Titanic Dataset')
+plt.show()
+```
+![image](https://github.com/Vanitha-SM/EXNO-6-DS/assets/119557985/32d6cc60-28b4-4839-88f6-19bb1b2d629c)
+
 # Result:
- Include your result here
+Thus, the Data Visualization using seaborn python library for the given data is implemented successfully
+
